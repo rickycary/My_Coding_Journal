@@ -1,25 +1,18 @@
-// Creates entries for Journal
-const Journal = {
-    data: [
-        {
-            day: "Tuesday",
-            goals: "Goals Submission",
-            goalsCompleted: true,
-            entry: "What did you do today"
-         },
-         {
-            day: "Wednesday",
-            goals: "Goals Submission",
-            goalsCompleted: false,
-            entry: "What did you do today"
-         }
-    ],
-    getAll: function(){
-        return this.data
-    },
-    getOne: function(index){
-        return this.data[index]
-    }
-}
+const mongoose = require("./connection");
 
+// Journal SCHEMA
+const journalSchema = new mongoose.Schema({
+    day: {type: String, required: true},
+    month: Number,
+    dayOfMonth: Number,
+    year: Number,
+    goal: String,
+    goalCompleted: Boolean,
+    entry: String
+}, {timestamps: true})
+
+// Journal Model
+const Journal = mongoose.model("Journal", journalSchema)
+
+// Export the Journal Model
 module.exports = Journal

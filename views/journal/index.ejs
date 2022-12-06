@@ -1,1 +1,5 @@
 <h1>My Coding Journal</h1>
+
+<% journals.forEach((journal, index) => { %>
+    <a href="/journal/<%= journal._id %>"><h2><%= journal.day %></h2></a>
+<% })%>
