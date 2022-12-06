@@ -21,5 +21,9 @@ A personal application for you to track and log your coding journey while in the
 ## Link to Planning Trello Board
 [Trello Board](https://trello.com/invite/b/Z24GoIwV/ATTIb1eb4c073d2dc78fe45bd9b465809044B449BE3E/project-2)
 
-## Mockup
-![MockUp](drawSQL.png)
+## Wire Frames
+![Index Page](picture/Index_Page.png)
+![Show Page](picture/Show_Page.png)
+![Create/Update Page](picture/Create_Page.png)
+## ERD
+![MockUp](picture/drawSQL.png)
