@@ -47,12 +47,21 @@ router.get("/", async (req, res) => {
 });
 
 // New Route - Get
+router.get("/new", (req, res) => {
+    res.render("journal/new.ejs")
+})
 
 // Destroy Route - Delete
 
 // Update Route - Put
 
 // Create Route - Post
+router.post("/", async (req, res) => {
+    // Make sure goalCompteted is true or false 
+    req.body.goalCompleted = Boolean(req.body.goalCompleted)
+    await Journal.create(req.body).catch((error) => errorHandler(error, res))
+    res.redirect("/journal")
+})
 
 // Edit Route - Get
 
