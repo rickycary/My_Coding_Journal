@@ -57,6 +57,10 @@ router.get("/", async (req, res) => {
 // Edit Route - Get
 
 // Show Route - Get
+router.get("/:id", async (req, res) => {
+    const journal = await Journal.findById(req.params.id)
+    res.render("journal/show.ejs", {journal})
+})
 
 
 
