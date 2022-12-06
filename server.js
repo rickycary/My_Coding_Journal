@@ -2,6 +2,7 @@
 require("dotenv").config();
 const express = require("express");
 const morgan = require("morgan");
+const JournalRouter = require("./controllers/journal")
 const methodOverride = require("method-override");
 const mongoose = require("mongoose");
 
@@ -19,6 +20,7 @@ mongoose.connection
 
 // Register Middleware 
 app.use(morgan("dev"));
+app.use("/journal", JournalRouter)
 app.use("/static", express.static("public"));
 app.use(express.urlencoded({extended: true}));
 app.use(methodOverride("_method"));
