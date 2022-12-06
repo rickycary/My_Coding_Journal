@@ -1,4 +1,4 @@
-#My Coding Journal
+# My Coding Journal
 A personal application for you to track and log your coding journey while in the GA Bootcamp. In this application you will be able to keep track of what you have learned each day while setting goals for the future. This will allow users to keep track and log their progress while they become a fullstack developer. 
 
 ## Technologies Used
