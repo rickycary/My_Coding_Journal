@@ -1,12 +1,33 @@
 <%- include("../partials/head.ejs") %>
 
+<body>
+    <div class="container">
+       <div class="header">
+            My Coding Journal
+        </div>
 
-<h1 class="title">My Coding Journal</h1>
+    <div class="large">
+        <a href="/journal/new"><button>Add Day</button></a>
+            <br>
+            <br>
+        Day of the week
+        <% journals.forEach((journal, index) => { %>
+            <a href="/journal/<%= journal._id %>"><h2><%= journal.day %></h2></a>
+        <% })%>
+    </div>
+
+    <div class="small">
+        Projects Completed
+    </div>
+
+    <div class="small">
+        To Do List
+    </div>
+
+    <div class="footer">
+        About
+    </div>
 
 
-<a href="/journal/new"><button>Add Day</button></a>
-<div class="days">
-<% journals.forEach((journal, index) => { %>
-    <a href="/journal/<%= journal._id %>"><h2><%= journal.day %></h2></a>
-<% })%>
-</div>
+    </div>
+</body>

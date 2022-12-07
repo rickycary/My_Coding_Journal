@@ -1,18 +1,37 @@
-<h1 class="title">My Coding Journal</h1>
+<%- include("../partials/head.ejs") %>
 
-<h2>Day: <%= journal.day %></h2>
 
-<h2>Date: <%= journal.month%>/<%= journal.dayOfMonth%>/<%= journal.year%></h2>
+<body>
+    <div class="container">
+        <div class="header">
+            My Coding Journal
+        </div>
 
-<h2>Goals: <%= journal.goal%></h2>
+        <div class="large">
 
-<h2>Goal Completed: <%= journal.goalCompleted ? "Yes" : "No" %></h2>
+            Day: <%= journal.day %>
+                <br>
+            Date: <%= journal.month%>/<%= journal.dayOfMonth%>/<%= journal.year%>
+                <br>
+            Goals: <%= journal.goal%>
+                <br>
+            Goal Completed: <%= journal.goalCompleted ? "Yes" : "No" %>
+                <br>
+            <a href="/journal/<%= journal._id %>/edit"><button>Update</button></a>
+                <br>
+            <form action="/journal/<%= journal._id %>?_method=DELETE" method="post">
+            <input type="submit" value="Delete ">
+            </form>
+        </div>
 
-<h2>Entry for the Day: <br><%= journal.entry%></h2>
+        <div class="small">
+            Entry for the Day: <br><%= journal.entry%>
 
-<a href="/journal/<%= journal._id %>/edit"><button>Update</button></a>
-<form action="/journal/<%= journal._id %>?_method=DELETE" method="post">
-    <input type="submit" value="Delete ">
-</form>
+        </div>
+
+
 
 <a href="/journal">Back to Main Page</a>
+
+    </div>
+</body>
