@@ -6,6 +6,10 @@
 
 <h2>Goals: <%= journal.goal%></h2>
 
-<h2>Goal Completed: <%= journal.goalCompleted%></h2>
+<h2>Goal Completed: <%= journal.goalCompleted ? "Yes" : "No" %></h2>
 
 <h2>Entry for the Day: <br><%= journal.entry%></h2>
+
+<form action="/journal/<%= journal._id %>?_method=DELETE" method="post">
+    <input type="submit" value="delete">
+</form>

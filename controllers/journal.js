@@ -52,6 +52,10 @@ router.get("/new", (req, res) => {
 })
 
 // Destroy Route - Delete
+router.delete("/:id", async (req, res) => {
+    await Journal.findByIdAndRemove(req.params.id)
+    res.redirect("/journal")
+})
 
 // Update Route - Put
 
