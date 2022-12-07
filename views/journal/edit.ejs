@@ -1,3 +1,6 @@
+<%- include("../partials/head.ejs") %>
+
+
 <h1>Update Entry on <%= journal.day %></h1>
 
 <form action="/journal/<%= journal._id %>?_method=PUT" method="post">

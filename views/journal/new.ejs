@@ -1,3 +1,6 @@
+<%- include("../partials/head.ejs") %>
+
+
 <h1>Create a new Journal Entry</h1>
 
 <form action="/journal" method="post">
@@ -5,7 +8,7 @@
     <input type="number" name="month" placeholder="Month">
     <input type="number" name="dayOfMonth" placeholder="Day">
     <input type="number" name="year" placeholder="Year"><br>
-    <input type="text" name="goals" placeholder="Goals for Today">
+    <input type="text" name="goal" placeholder="Goals for Today">
     <input type="checkbox" name="goalCompleted"><br>
     <input type="text" name="entry" placeholder="Entry for the day"><br>
 
