@@ -53,11 +53,19 @@ router.get("/new", (req, res) => {
 
 // Destroy Route - Delete
 router.delete("/:id", async (req, res) => {
-    await Journal.findByIdAndRemove(req.params.id)
+    await Journal.findByIdAndRemove(req.params.id).catch((error) => errorHandler(error, res))
     res.redirect("/journal")
 })
 
 // Update Route - Put
+router.put("/:id", async (req, res) => {
+
+    req.body.goalCompleted = Boolean(req.body.goalCompleted)
+
+    await Journal.findByIdAndUpdate(req.params.id, req.body)
+
+    res.redirect("/journal")
+})
 
 // Create Route - Post
 router.post("/", async (req, res) => {
@@ -68,10 +76,14 @@ router.post("/", async (req, res) => {
 })
 
 // Edit Route - Get
+router.get("/:id/edit", async (req, res) => {
+    const journal = await Journal.findById(req.params.id).catch((error) => errorHandler(error, res))
+    res.render("journal/edit.ejs", {journal})
+})
 
 // Show Route - Get
 router.get("/:id", async (req, res) => {
-    const journal = await Journal.findById(req.params.id)
+    const journal = await Journal.findById(req.params.id).catch((error) => errorHandler(error, res))
     res.render("journal/show.ejs", {journal})
 })
 

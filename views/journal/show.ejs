@@ -10,6 +10,9 @@
 
 <h2>Entry for the Day: <br><%= journal.entry%></h2>
 
+<a href="/journal/<%= journal._id %>/edit"><button>Update</button></a>
 <form action="/journal/<%= journal._id %>?_method=DELETE" method="post">
-    <input type="submit" value="delete">
+    <input type="submit" value="Delete ">
 </form>
+
+<a href="/journal">Back to Main Page</a>
