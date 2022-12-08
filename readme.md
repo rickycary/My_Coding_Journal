@@ -5,11 +5,14 @@ A personal application for you to track and log your coding journey while in the
 - Node
 - Express
 - MongoDB
+- HTML
 - CSS
+- JS
 - Markdown
 - Trello
 - Mockflow
 - DrawSQL
+- Google Fonts
 
 ## Functions 
 - Users will be able to use the application on desktop and mobile
