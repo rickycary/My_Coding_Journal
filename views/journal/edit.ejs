@@ -1,50 +1,72 @@
 <%- include("../partials/head.ejs") %>
 
+<body>
+    <div class="container">
+        <div class="header">
+            Update Entry on <%= journal.day %>
+        </div>
 
-<h1>Update Entry on <%= journal.day %></h1>
-
-<form action="/journal/<%= journal._id %>?_method=PUT" method="post">
+    <div class="large">
+        <form action="/journal/<%= journal._id %>?_method=PUT" method="post">
     
-    <input 
-        type="text" 
-        name="day" 
-        placeholder="Day of the week" 
-        value="<%= journal.day %>">
-    <br>
-    <input 
-        type="number" 
-        name="month" 
-        placeholder="Month" 
-        value="<%= journal.month %>">
-    <input 
-        type="number" 
-        name="dayOfMonth" 
-        placeholder="Day" 
-        value="<%= journal.dayOfMonth %>">
-    <input 
-        type="number" 
-        name="year" 
-        placeholder="Year" 
-        value="<%= journal.year %>">
-    <br>
-    <input 
-        type="text" 
-        name="goal" 
-        placeholder="Goals for Today" 
-        value="<%= journal.goal %>">
-    <input 
-        type="checkbox" 
-        name="goalCompleted" 
-        <%= journal.goalCompleted ? "checked" : "" %>>
-    <br>
-    <input 
-        type="text" 
-        name="entry" 
-        placeholder="Entry for the day" 
-        value="<%= journal.entry %>">
-    <br>
+            <input 
+                type="text" 
+                name="day" 
+                placeholder="Day of the week" 
+                value="<%= journal.day %>">
+            <br>
+            <input 
+                class="date"
+                type="number" 
+                name="month" 
+                placeholder="Month" 
+                value="<%= journal.month %>">
+            <input 
+                class="date"
+                type="number" 
+                name="dayOfMonth" 
+                placeholder="Day" 
+                value="<%= journal.dayOfMonth %>">
+            <input 
+                class="date"
+                type="number" 
+                name="year" 
+                placeholder="Year" 
+                value="<%= journal.year %>">
+            <br>
+            <input 
+                type="text" 
+                name="goal" 
+                placeholder="Goals for Today" 
+                value="<%= journal.goal %>">
+            <input 
+                type="checkbox" 
+                name="goalCompleted" 
+                <%= journal.goalCompleted ? "checked" : "" %>>
+            <br>
+            <input 
+                class="entry"
+                type="text" 
+                name="entry" 
+                placeholder="Entry for the day" 
+                value="<%= journal.entry %>">
+            <br>
+            <input type="submit" value="Update">
+        </form>
 
-    <input type="submit" value="Update">
-</form>
+    </div>
+    <div class="small">
+        <a href="/journal">Back to Main Page</a>
+    </div>
 
-<a href="/journal">Back to Main Page</a>
+    <div class="small">
+        Extra
+    </div>
+
+    <div class="footer">
+        Footer
+    </div>
+
+
+</div>
+</body>

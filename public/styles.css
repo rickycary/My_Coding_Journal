@@ -1,5 +1,10 @@
 body {
     margin: 0;
+    background-color: #9CC0E7;
+}
+
+h1 {
+    text-align: center;
 }
 
 .container {
@@ -24,6 +29,9 @@ body {
 .header {
     grid-column-start: 1;
     grid-column-end: 4;
+    background-color: #EEEEEE;
+    text-align: center;
+    
 }
 
 .large {
@@ -31,9 +39,36 @@ body {
     grid-row-end: 4;
     grid-column-start: 1;
     grid-column-end: 3;
+    background-color: #FCFCFC;
+}
+
+.small {
+    background-color: #FAEACB;
+}
+
+.large, .small {
+    border-radius: 5%;
 }
 
 .footer {
     grid-column-start: 1;
     grid-column-end: 4;
+    background-color: #F7DBD7;
+}
+
+.entrancePage {
+    text-align: center;
+}
+
+.date {
+    width: 70px;
+}
+
+.entry {
+    height: 100px;
+    width: 220px;
+}
+
+.button {
+    
 }
