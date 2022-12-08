@@ -1,5 +1,6 @@
 const mongoose = require("./connection");
 
+const { Schema, model } = mongoose
 // Journal SCHEMA
 const journalSchema = new mongoose.Schema({
     day: {type: String, required: true},
@@ -9,7 +10,7 @@ const journalSchema = new mongoose.Schema({
     goal: String,
     goalCompleted: Boolean,
     entry: String
-}, {timestamps: true})
+})
 
 // Journal Model
 const Journal = mongoose.model("Journal", journalSchema)

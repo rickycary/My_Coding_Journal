@@ -17,7 +17,7 @@ app.use("/static", express.static("public"));
 // Routes and Routers 
 
 app.get("/", (req, res) => {
-    res.send("Server is working")
+    res.render("user.ejs")
 })
 
 const PORT = process.env.PORT || 3000
