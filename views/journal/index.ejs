@@ -8,16 +8,18 @@
             <div></div>
             <div>My Coding Journal</div>
             <a href=".."><div class="logout">Logout</div></a>
+
        </div>
 
     <div class="large">
-        <a href="/journal/new"><button class="btn">Add Day</button></a>
-            <br>
-            <br>
+        <div class="largeContainer">
         Day of the week
         <% journals.forEach((journal, index) => { %>
             <a href="/journal/<%= journal._id %>"><h4><%= journal.day %></h4></a>
         <% })%>
+        <a href="/journal/new"><button class="btn">Add Day</button></a>
+        </div>
+
     </div>
 
     <div class="small">
