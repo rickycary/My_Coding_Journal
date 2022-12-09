@@ -1,10 +1,6 @@
 .background {
     margin: 0;
-    background-color: #9CC0E7;
-}
-
-h1 {
-    text-align: center;
+    background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url("https://images.pexels.com/photos/169573/pexels-photo-169573.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2") ;
 }
 
 .container {
@@ -23,7 +19,7 @@ h1 {
 
 .container div {
     padding: 10px;
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 
 .header {
@@ -40,22 +36,48 @@ h1 {
     grid-column-start: 1;
     grid-column-end: 3;
     background-color: #FCFCFC;
+    text-align: center;
+}
+
+.large-2 {
+    background-color: #FAEACB;
+    grid-row-start: 2;
+    grid-row-end: 5;
+    text-align: center;
 }
 
 .small {
     background-color: #FAEACB;
 }
 
-.large, .small {
-    border-radius: 5%;
+.large, .large-2, .small {
+    border-radius: 6%;
 }
 
 .footer {
     grid-column-start: 1;
     grid-column-end: 4;
-    background-color: #F7DBD7;
+    /* background-color: #009688; */
 }
 
+.footerShow {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    background-color: #F7DBD7;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.indexFooter {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #009688;
+}
+
+.indexResources {
+    flex-direction: column;
+}
 
 .date {
     width: 70px;
@@ -66,18 +88,92 @@ h1 {
     width: 220px;
 }
 
-.user {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 17px;
-    color: #926239;
-    line-height: 1.6;
-    padding: 0;
+.btn {
+    background: black;
+    color: white;
+    border-radius: 30px;
+    transition: transform 0.4s ease;
 }
 
-#showcase {
-    background-image: url("https://images.pexels.com/photos/169573/pexels-photo-169573.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+.banner {
+    width: 100%;
     height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url("https://images.pexels.com/photos/169573/pexels-photo-169573.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2") ;
     background-size: cover;
     background-position: center;
+}
+
+.navbar {
+    text-align: start;
+    width: 85%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+}
+
+.logo {
+    width: 120px;
+    cursor: pointer;
+}
+
+.userIntro {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: white;
+}
+
+.userIntro h1 {
+    font-size: 70px;
+    margin-top: 80px;
+}
+
+.userIntro p {
+    margin: 20px auto;
+    font-weight: 100;
+    line-height: 25px;
+}
+
+.navbar ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.content {
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid #009688;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    font-size: 20px;
+}
+
+span {
+    background: #009688;
+    height: 100%;
+    width: 100%;
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
 }

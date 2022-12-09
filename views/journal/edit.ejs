@@ -1,14 +1,13 @@
 <%- include("../partials/head.ejs") %>
+<title>My Coding Journal</title>
 
 <body class="background">
     <div class="container">
         <div class="header">
             Update Entry on <%= journal.day %>
         </div>
-
     <div class="large">
         <form action="/journal/<%= journal._id %>?_method=PUT" method="post">
-    
             <input 
                 type="text" 
                 name="day" 
@@ -51,22 +50,17 @@
                 placeholder="Entry for the day" 
                 value="<%= journal.entry %>">
             <br>
-            <input type="submit" value="Update">
+            <input class="btn" type="submit" value="Update">
         </form>
-
     </div>
     <div class="small">
         <a href="/journal">Back to Main Page</a>
     </div>
-
     <div class="small">
         Extra
     </div>
-
     <div class="footer">
         Footer
     </div>
-
-
 </div>
 </body>
