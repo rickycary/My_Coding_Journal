@@ -1,6 +1,8 @@
 .background {
     margin: 0;
     background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url("https://images.pexels.com/photos/169573/pexels-photo-169573.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2") ;
+    background-size: cover;
+    background-position: center;
 }
 
 .container {
@@ -36,6 +38,15 @@
     grid-row-start: 2;
     grid-row-end: 4;
     grid-column-start: 1;
+    grid-column-end: 3;
+    background-color: #FCFCFC;
+    text-align: center;
+}
+
+.editLarge {
+    grid-row-start: 2;
+    grid-row-end: 4;
+    grid-column-start: 2;
     grid-column-end: 3;
     background-color: #FCFCFC;
     text-align: center;

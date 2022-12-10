@@ -4,16 +4,21 @@
 
 <body class="background">
     <div class="container">
-        <div class="header">
-            My Coding Journal
-        </div>
+       <div class="header">
+            <div></div>
+            <div>My Coding Journal</div>
+            <a href=".."><div class="logout">Logout</div></a>
+       </div>
 
         <div class="large">
             Day: <%= journal.day %>
                 <br>
+                <br>
             Date: <%= journal.month%>/<%= journal.dayOfMonth%>/<%= journal.year%>
                 <br>
+                <br>
             Goals: <%= journal.goal%>
+                <br>
                 <br>
             Goal Completed: <%= journal.goalCompleted ? "Yes" : "No" %>
                 <br>
@@ -32,7 +37,7 @@
 
 
         <div class="footerShow">
-            <a href="/journal">Back to Main Page</a>
+                <a href="/journal">Back to Main Page</a>
         </div>
 
     </div>

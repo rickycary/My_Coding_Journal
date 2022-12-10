@@ -3,16 +3,20 @@
 
 <body class="background">
     <div class="container">
-        <div class="header">
-            Update Entry on <%= journal.day %>
-        </div>
-    <div class="large">
+       <div class="header">
+            <div></div>
+            <div>My Coding Journal</div>
+            <a href=".."><div class="logout">Logout</div></a>
+       </div>
+
+    <div class="editLarge">
         <form action="/journal/<%= journal._id %>?_method=PUT" method="post">
             <input 
                 type="text" 
                 name="day" 
                 placeholder="Day of the week" 
                 value="<%= journal.day %>">
+            <br>
             <br>
             <input 
                 class="date"
@@ -33,6 +37,7 @@
                 placeholder="Year" 
                 value="<%= journal.year %>">
             <br>
+            <br>
             <input 
                 type="text" 
                 name="goal" 
@@ -43,6 +48,7 @@
                 name="goalCompleted" 
                 <%= journal.goalCompleted ? "checked" : "" %>>
             <br>
+            <br>
             <input 
                 class="entry"
                 type="text" 
@@ -50,17 +56,16 @@
                 placeholder="Entry for the day" 
                 value="<%= journal.entry %>">
             <br>
+            <br>
             <input class="btn" type="submit" value="Update">
         </form>
     </div>
-    <div class="small">
-        <a href="/journal">Back to Main Page</a>
-    </div>
-    <div class="small">
-        Extra
-    </div>
+
     <div class="footer">
-        Footer
+        <div class="indexFooter">
+            <a href="/journal">Back to Main Page</a>
+
     </div>
+
 </div>
 </body>

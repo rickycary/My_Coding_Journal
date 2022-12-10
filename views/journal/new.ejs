@@ -1,18 +1,33 @@
 <%- include("../partials/head.ejs") %>
 <title>My Coding Journal</title>
 
-<h1>Create a new Journal Entry</h1>
+<body class="background">
+    <div class="container">
+        <div class="header">
+            <div></div>
+            <div>My Coding Journal</div>
+            <a href=".."><div class="logout">Logout</div></a>
+        </div>
 
+
+<div class="editLarge">
 <form action="/journal" method="post">
-    <input type="text" name="day" placeholder="Day of the week"><br>
+    <input type="text" name="day" placeholder="Day of the week"><br><br>
     <input class="date" type="number" name="month" placeholder="Month">
     <input class="date" type="number" name="dayOfMonth" placeholder="Day">
-    <input class="date" type="number" name="year" placeholder="Year"><br>
+    <input class="date" type="number" name="year" placeholder="Year" value="2022"><br><br>
     <input type="text" name="goal" placeholder="Goals for Today">
-    <input type="checkbox" name="goalCompleted"><br>
-    <input class="entry" type="text" name="entry" placeholder="Entry for the day"><br>
-
+    <input type="checkbox" name="goalCompleted"><br><br>
+    <input class="entry" type="text" name="entry" placeholder="Entry for the day"><br><br>
     <input class="btn" type="submit" value="Make New Day">
 </form>
+</div>
 
-<a href="/journal">Back to Main Page</a>
+<div class="footer">
+    <div class="indexFooter">
+        <a href="/journal">Back to Main Page</a>
+    </div>
+</div>
+
+</div>
+</body>
