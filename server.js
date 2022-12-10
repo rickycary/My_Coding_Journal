@@ -4,6 +4,8 @@ const express = require("express");
 const morgan = require("morgan");
 const methodOverride = require("method-override");
 const JournalRouter = require("./controllers/journal")
+const ProjectRouter = require("./controllers/project")
+
 
 // Application object
 const app = express();
@@ -27,3 +29,4 @@ app.listen(process.env.PORT, () => {
 
 // Register routers 
 app.use("/journal", JournalRouter)
+app.use("/project", ProjectRouter)
