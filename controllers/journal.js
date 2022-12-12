@@ -1,6 +1,8 @@
 const { application } = require("express");
 const express = require("express");
 const Journal = require("../models/journal")
+const Project = require("../models/project")
+
 
 
 // Create the router

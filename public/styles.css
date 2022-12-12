@@ -60,8 +60,17 @@
 }
 
 .small {
-    background-color: #FAEACB;
-    text-align: center;
+    background-image: linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)), url(https://media.istockphoto.com/id/1323892000/photo/sparkling-white-fireworks-in-a-black-sky.jpg?s=612x612&w=0&k=20&c=RIolsXqJFzO8gPyj0Shb56gDR9XmpJaKXv9lG6wTxJY=);
+    background-size: cover;
+    background-position: center;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.linkColor {
+    color: white;
 }
 
 .leopard {
