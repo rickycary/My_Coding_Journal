@@ -9,7 +9,10 @@ const journalSchema = new mongoose.Schema({
     year: Number,
     goal: String,
     goalCompleted: Boolean,
-    entry: String
+    entry: String,
+    project: String,
+    link: String,
+    todo: String,
 })
 
 // Journal Model

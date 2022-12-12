@@ -30,3 +30,4 @@ app.listen(process.env.PORT, () => {
 // Register routers 
 app.use("/journal", JournalRouter)
 app.use("/project", ProjectRouter)
+

@@ -61,9 +61,17 @@
 
 .small {
     background-color: #FAEACB;
+    text-align: center;
 }
 
-.large, .large-2, .small {
+.leopard {
+    background-image: url(https://media.timeout.com/images/105857318/1372/772/image.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+
+.large, .large-2, .small, .leopard {
     border-radius: 6%;
 }
 

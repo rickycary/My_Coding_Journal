@@ -2,6 +2,7 @@ const { application } = require("express");
 const express = require("express");
 const Journal = require("../models/journal")
 
+
 // Create the router
 const router = express.Router();
 
@@ -23,7 +24,11 @@ router.get("/seed", async (req, res) => {
             year: 2022,
             goal: "Complete all Crud routes on project 2",
             goalCompleted: false,
-            entry: "Today I sent in my 2nd project to get approval from my instructors at GA. It has been approved and now I am going to begin creating my routes to meet MVP. We have class tonight to work on our projects so that will be a good time to work on the tasks."
+            entry: "Today I sent in my 2nd project to get approval from my instructors at GA. It has been approved and now I am going to begin creating my routes to meet MVP. We have class tonight to work on our projects so that will be a good time to work on the tasks.",
+            project: "Amiibo Project",
+            link: "https://rickycary.github.io/project1/",
+            todo: "Make Project page and to do page"
+
         },
         {
             day: "Wednesday", 
@@ -32,7 +37,10 @@ router.get("/seed", async (req, res) => {
             year: 2022,
             goal: "Work on styling my project",
             goalCompleted: false,
-            entry: "Will return on this day"
+            entry: "Will return on this day",
+            project: "Amiibo Project",
+            link: "https://rickycary.github.io/project1/",
+            todo: "Make Project page and to do page"
         }
     ]).catch((error) => errorHandler(error, res))
     res.json(journals)
