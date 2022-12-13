@@ -24,6 +24,18 @@ A personal application for you to track and log your coding journey while in the
 ## Link to Planning Trello Board
 [Trello Board](https://trello.com/invite/b/Z24GoIwV/ATTIb1eb4c073d2dc78fe45bd9b465809044B449BE3E/project-2)
 
+## App Images
+Welcome Page
+![Welcome Page](picture/welcomePage.png)
+Index Page
+![Index Page](picture/indexPage.png)
+Show Page
+![Show Page](picture/showPage.png)
+Edit Page
+![Edit Page](picture/editPage.png)
+New Page
+![New Page](picture/newPage.png)
+
 ## Wire Frames
 ![Index Page](picture/Index_Page.png)
 ![Show Page](picture/Show_Page.png)
