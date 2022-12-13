@@ -1,8 +1,28 @@
-<h1>List of Projects</h1>
+<%- include("../partials/head.ejs") %>
+<title>My Coding Journal</title>
 
-<!-- <a href="/project/new"><button>Add a new project</button></a> -->
+<body class="background">
+    <div class="container">
+        <div class="header">
+            <div></div>
+            <div>Currently Working On</div>
+            <a href=".."><div class="logout">Logout</div></a>
+        </div> 
 
-<% projects.forEach((project, index) => { %>
-    <a href="<%= project.link %>"><h2><%= project.name %></h2></a>
-    <h2><%= project.description %></h2>
-<% }) %>
+        <div class="editlarge">
+            <% projects.forEach((project, index) => { %>
+                <a href="<%= project.link %>"><%= project.name %></a>
+                <br><br>
+                <%= project.description %>
+                <br><br>
+            <% }) %>
+        </div>
+        
+
+    </div>
+    <div class="footer">
+        <div class="indexFooter">
+            <a href="/journal">Back to Main Page</a>
+
+    </div>
+</body>

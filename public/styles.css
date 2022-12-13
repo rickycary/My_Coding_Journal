@@ -3,6 +3,7 @@
     background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url("https://images.pexels.com/photos/169573/pexels-photo-169573.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2") ;
     background-size: cover;
     background-position: center;
+    max-width: 100%;
 }
 
 .container {
